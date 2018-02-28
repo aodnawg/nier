@@ -1,12 +1,17 @@
 import React from 'react';
 
 export default class Piece extends React.Component {
+  animate() {
+    return this.props.shown ? 'fadein' : '';
+  }
+
   render() {
     const color = '#E5E5C4';
+    const cn    = this.animate();
     return <polygon
-      className={'hoge'}
+      className={cn}
       points={this.props.xy}
       fill={color}
-      fillOpacity={ Math.floor(Math.random() * 101) / 100 } />
+      fillOpacity={this.props.opacity} />
   }
 }

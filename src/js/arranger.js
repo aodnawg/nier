@@ -7,13 +7,11 @@ export default class Arranger {
   }
 
   call() {
-    return this.piece_xys().map( (a) => {
-      return a.join(' ')} );
+    return this.piece_xys();
   }
 
   svg_params() {
-    piece_xys.map((pos) => { return pos
-      .map( (xy) => { return xy.join(',') } ) });
+    return this.call();
   }
 
   piece_size() {
@@ -35,20 +33,23 @@ export default class Arranger {
       const base_left  = [vertex[0] - height, vertex[1] + height];
       const base_right = [vertex[0] + height, vertex[1] + height];
       const pos = [vertex, base_left, base_right];
-      return pos;
+      return pos.join(' ');
     } else {
       const vertex_    = [vertex[0], vertex[1] + height];
       const base_left  = [vertex[0] - height, vertex[1]];
       const base_right = [vertex[0] + height, vertex[1]];
       const pos = [vertex_, base_left, base_right];
-      return pos;
+      return pos.join(' ');
     }
   }
 
   piece_xys() {
     const grid = this.grid();
     const xys = grid.map( (v, i) => {
-      return this.piece_xy(v, i);
+      return {
+        shown : false,
+        xy    : this.piece_xy(v, i),
+        opacity : 0 }
     });
     return xys;
   }
