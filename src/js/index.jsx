@@ -1,39 +1,21 @@
-import React from 'react';
+import { Provider, connect } from 'react-redux';
+import store from './store'
+import Container from './container'
 import ReactDOM from 'react-dom';
-import Arranger from './arranger';
-import Piece from './components/piece.jsx'
+import React from 'react';
 
 import '../scss/fade.scss'
+import '../scss/reset.scss'
 
-class ShoppingList extends React.Component {
-  render() {
-    const arranger = new Arranger(540, 540)
-    const xys = arranger.call();
-
-    return <div>
-        <p>ほげほげ</p>
-        <svg version="1.1" width="540" height="540"  xmlns="http://www.w3.org/2000/svg">
-          { xys.map( (xy) => { return <Piece xy={xy} /> }) }
-        </svg>
-    </div>;
-  }
-}
-
-class Rect extends React.Component {
-
-  render() {
-    this.arranger = new Arranger(540, 800)
-    this.poss = this.arranger.call()
-
-    const hoge = this.poss[0];
-    console.log(hoge);
-    console.log(this.props.hoge);
-
-    return <polygon points={hoge} />
-  }
-}
+import set_window_size from './action/set_window_size'
 
 ReactDOM.render(
-  <ShoppingList />,
+  <Provider store={store}>
+    <Container />
+  </Provider>,
   document.getElementById('content')
 );
+
+window.onload = () => {
+  store.dispatch(set_window_size());
+};
