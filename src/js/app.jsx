@@ -1,10 +1,9 @@
 import React from 'react';
-import Menu from './components/menu.jsx';
+import Menu from './components/menu';
 
 export default class App extends React.Component {
-  hoge(e) {
-    this.props.actions.show_menu();
-    console.log(this.props);
+  hoge() {
+    this.props.actions.menu_actions.show_menu();
   }
 
   render() {

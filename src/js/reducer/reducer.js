@@ -16,6 +16,9 @@ export default function formReducer(state, action) {
     case menu_actions.HIDE_MENU:
       return Object.assign({}, state, { show_menu: false });
 
+    case menu_actions.CHANGE_PIECE_ANIMATION_STATE:
+      return Object.assign({}, state, { pieces: action.pieces });
+
     default:
       return state;
   }

@@ -10,7 +10,6 @@ export default function fadein() {
   }
   array.map((x, i) => {
     setTimeout(() => {
-      console.log(x, i);
       store.dispatch(fade_piece(x));
     }, 1 * i);
     return null;

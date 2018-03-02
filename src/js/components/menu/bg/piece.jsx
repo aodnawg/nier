@@ -1,8 +1,21 @@
 import React from 'react';
 
 export default class Piece extends React.Component {
-  on_animationed() {
-    console.log(1000);
+  on_animation_start() {
+    this.props.actions.piece_actions
+      .change_piece_animation_state(this.props.index, 0);
+  }
+
+  on_animation_end() {
+    this.props.actions.piece_actions
+      .change_piece_animation_state(this.props.index, 2);
+
+    this.props.hoge();
+  }　　　　　
+
+  on_animation_iteration() {
+    this.props.actions.piece_actions
+      .change_piece_animation_state(this.props.index, 1);
   }
 
   animate() {
@@ -22,7 +35,9 @@ export default class Piece extends React.Component {
       className={`${cn} piece`}
       points={this.props.xy}
       style={style}
-      onAnimationEnd={() => this.on_animationed()}
-    />)
+      onAnimationStart={() => this.on_animation_start()}
+      onAnimationEnd={() => this.on_animation_end()}
+      onAnimationIteration={() => this.on_animation_iteration()}
+    />);
   }
 }
