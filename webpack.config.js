@@ -2,11 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  mode: 'development', // 追加
+  mode: 'development',
   entry: {
-    'index': [
-      path.resolve(__dirname, 'src/js/index.jsx')
-    ]
+    index: [
+      path.resolve(__dirname, 'src/js/index.jsx'),
+    ],
   },
   output: {
     filename: '[name].bundle.js',
@@ -15,9 +15,8 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
-    // webpack.optimize.UglifyJsPluginを削除
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    }),
   ],
   module: {
     rules: [
@@ -28,24 +27,25 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false,
+              url: true,
               sourceMap: true,
-              importLoaders: 2
+              importLoaders: 2,
             },
           },
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
       },
-    ]
+      {
+        test: /\.(gif|png|jpg|eot|wof|woff|ttf|svg)$/,
+        use: 'url-loader',
+      },
+    ],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-
-  devtool: 'inline-source-map',
-  cache: true
 };

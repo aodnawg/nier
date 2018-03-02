@@ -1,19 +1,20 @@
-const SET_WINDOW_SIZE = 'SET_WINDOW_SIZE'
-const FADE_PIECE = 'FADE_PIECE'
+import * as menu_actions from '../action/menu_actions';
+import * as set_window_size from '../action/set_window_size';
 
 export default function formReducer(state, action) {
   switch (action.type) {
-    case SET_WINDOW_SIZE:
+    case set_window_size.SET_WINDOW_SIZE:
       return Object.assign({}, state, {
         window_width: action.value.width,
         window_height: action.value.height,
         pieces: action.value.pieces,
-      })
+      });
 
-    case FADE_PIECE:
-      const state_n = Object.assign({}, state);
-      state_n.pieces[action.index].shown = true;
-      return Object.assign({}, state, state_n)
+    case menu_actions.SHOW_MENU:
+      return Object.assign({}, state, { show_menu: true });
+
+    case menu_actions.HIDE_MENU:
+      return Object.assign({}, state, { show_menu: false });
 
     default:
       return state;

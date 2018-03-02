@@ -21,36 +21,34 @@ export default class Arranger {
   grid() {
     const piece_size = this.piece_size;
     const column_qty = Math.ceil(this.width / piece_size) + 1;
-    const grid_cascade = [ ...Array(column_qty).keys(0) ]
-      .map((x) => { return [ ...Array(this.row_qty).keys(0)]
-         .map((y) => { return [x, y].map( (_) => { return _ * piece_size }) } )})
+    const grid_cascade = [...Array(column_qty).keys(0)]
+      .map(x => [...Array(this.row_qty).keys(0)]
+        .map(y => [x, y].map(_ => _ * piece_size)));
     const grid = grid_cascade.concat.apply([], grid_cascade);
     return grid;
   }
 
   piece_xy(vertex, index, height = this.piece_size) {
     if (index % 2 === 0) {
-      const base_left  = [vertex[0] - height, vertex[1] + height];
+      const base_left = [vertex[0] - height, vertex[1] + height];
       const base_right = [vertex[0] + height, vertex[1] + height];
       const pos = [vertex, base_left, base_right];
       return pos.join(' ');
-    } else {
-      const vertex_    = [vertex[0], vertex[1] + height];
-      const base_left  = [vertex[0] - height, vertex[1]];
-      const base_right = [vertex[0] + height, vertex[1]];
-      const pos = [vertex_, base_left, base_right];
-      return pos.join(' ');
     }
+    const vertex_ = [vertex[0], vertex[1] + height];
+    const base_left = [vertex[0] - height, vertex[1]];
+    const base_right = [vertex[0] + height, vertex[1]];
+    const pos = [vertex_, base_left, base_right];
+    return pos.join(' ');
   }
 
   piece_xys() {
     const grid = this.grid();
-    const xys = grid.map( (v, i) => {
-      return {
-        shown : false,
-        xy    : this.piece_xy(v, i),
-        opacity : 0 }
-    });
+    const xys = grid.map((v, i) => ({
+      shown: false,
+      xy: this.piece_xy(v, i),
+      opacity: 0,
+    }));
     return xys;
   }
 }
