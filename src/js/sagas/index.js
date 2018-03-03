@@ -4,16 +4,26 @@ import * as actions from '../actions/menu_actions';
 async function wait() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve('nyan');
-    }, 3000);
+      resolve('finish');
+    }, 1000);
   });
 }
 
-function* someAnimationSaga() {
-  yield call(wait);
+function* openMenuSaga() {
   yield put(actions.show_menu());
+  yield put(actions.show_bg());
+  yield call(wait);
+  yield put(actions.show_contents());
+}
+
+function* closeMenuSaga() {
+  yield put(actions.hide_contents());
+  yield put(actions.hide_bg());
+  yield call(wait);
+  yield put(actions.hide_menu());
 }
 
 export default function* mySaga() {
-  yield takeLatest(actions.HOGE, someAnimationSaga);
+  yield takeLatest(actions.OPEN_MENU, openMenuSaga);
+  yield takeLatest(actions.CLOSE_MENU, closeMenuSaga);
 }

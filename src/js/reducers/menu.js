@@ -13,8 +13,20 @@ function menu(state = {}, action) {
     case menu_actions.SHOW_MENU:
       return Object.assign({}, state, { show_menu: true });
 
+    case menu_actions.SHOW_BG:
+      return Object.assign({}, state, { show_bg: true });
+
+    case menu_actions.SHOW_CONTENTS:
+      return Object.assign({}, state, { show_contents: true });
+
     case menu_actions.HIDE_MENU:
       return Object.assign({}, state, { show_menu: false });
+
+    case menu_actions.HIDE_BG:
+      return Object.assign({}, state, { show_bg: false });
+
+    case menu_actions.HIDE_CONTENTS:
+      return Object.assign({}, state, { show_contents: false });
 
     case menu_actions.CHANGE_BG_ANIMATION_STATE:
       return Object.assign({}, state, { bg: { animation_state: action.state } });

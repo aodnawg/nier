@@ -7,7 +7,7 @@ export default class Bg extends React.Component {
   render() {
     return (<div className="bg">
       <svg
-version="1.1"
+        version="1.1"
         width={this.props.state.window_width}
         height={this.props.state.window_height}
         xmlns="http://www.w3.org/2000/svg"
@@ -15,9 +15,9 @@ version="1.1"
 
         <Filter />
         <Pieces
-pieces={this.props.state.pieces}
+          pieces={this.props.state.pieces}
           actions={this.props.actions}
-          shown={this.props.state.show_menu}
+          shown={this.props.state.show_bg}
         />
       </svg>
             </div>);

@@ -3,7 +3,7 @@ import Menu from './containers/menu';
 
 export default class App extends React.Component {
   click_handler() {
-    this.props.actions.menu_actions.show_menu();
+    this.props.actions.menu_actions.open_menu();
   }
 
   render() {

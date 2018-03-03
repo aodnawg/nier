@@ -1,12 +1,12 @@
+import 'babel-polyfill';
+
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import React from 'react';
-
 import store from './store';
 import Container from './container';
 
 import '../scss/index.scss';
-
 import set_window_size from './actions/set_window_size';
 
 ReactDOM.render(

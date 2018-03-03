@@ -4,8 +4,6 @@
   }
   100%{
     fill-opacity: 1;
-    fill: #E5E5C4;
-
   }
 }
 
@@ -20,12 +18,14 @@
 
 .pieces {
   polygon.piece {
+    transition: all 0.01s linear;    
+
     &.fadein{
-      animation: fadein 0.2s linear forwards;
+      opacity: 1;
     }
 
     &.fadeout{
-      animation: fadeout 0.2s linear forwards;
+      opacity: 0;
     }
   }
 }

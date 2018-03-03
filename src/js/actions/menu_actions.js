@@ -1,7 +1,49 @@
+export const OPEN_MENU = 'OPEN_MENU';
+export function open_menu() {
+  return {
+    type: OPEN_MENU,
+  };
+}
+
 export const SHOW_MENU = 'SHOW_MENU';
 export function show_menu() {
   return {
     type: SHOW_MENU,
+  };
+}
+
+export const SHOW_BG = 'SHOW_BG';
+export function show_bg() {
+  return {
+    type: SHOW_BG,
+  };
+}
+
+export const SHOW_CONTENTS = 'SHOW_CONTENS';
+export function show_contents() {
+  return {
+    type: SHOW_CONTENTS,
+  };
+}
+
+export const CLOSE_MENU = 'CLOSE_MENU';
+export function close_menu() {
+  return {
+    type: CLOSE_MENU,
+  };
+}
+
+export const HIDE_CONTENTS = 'HIDE_CONTENTS';
+export function hide_contents() {
+  return {
+    type: HIDE_CONTENTS,
+  };
+}
+
+export const HIDE_BG = 'HIDE_BG';
+export function hide_bg() {
+  return {
+    type: HIDE_BG,
   };
 }
 
