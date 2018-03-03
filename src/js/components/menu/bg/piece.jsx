@@ -22,7 +22,6 @@ export default class Piece extends React.Component {
 
   render() {
     const cn = this.animate();
-    const delay = Math.floor(Math.random() * 400);
     const style = { animationDelay: `${this.props.delayTime}ms ` };
 
     return (<polygon

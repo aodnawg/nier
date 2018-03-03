@@ -1,6 +1,7 @@
-import App from './app';
-import { Provider, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+import App from './app';
 import * as menu_actions from './action/menu_actions';
 import * as piece_actions from './action/piece_actions';
 
@@ -18,6 +19,7 @@ function mapDispatchToProps(dispatch) {
     },
   };
 }
+
 const Container = connect(
   mapStateToProps,
   mapDispatchToProps,

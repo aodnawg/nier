@@ -19,7 +19,7 @@ export default class Arranger {
   }
 
   grid() {
-    const piece_size = this.piece_size;
+    const { piece_size } = this;
     const column_qty = Math.ceil(this.width / piece_size) + 1;
     const grid_cascade = [...Array(column_qty).keys(0)]
       .map(x => [...Array(this.row_qty).keys(0)]
@@ -35,10 +35,10 @@ export default class Arranger {
       const pos = [vertex, base_left, base_right];
       return pos.join(' ');
     }
-    const vertex_ = [vertex[0], vertex[1] + height];
+    const vertex_inverted = [vertex[0], vertex[1] + height];
     const base_left = [vertex[0] - height, vertex[1]];
     const base_right = [vertex[0] + height, vertex[1]];
-    const pos = [vertex_, base_left, base_right];
+    const pos = [vertex_inverted, base_left, base_right];
     return pos.join(' ');
   }
 

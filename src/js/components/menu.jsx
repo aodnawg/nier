@@ -15,7 +15,13 @@ export default class Menu extends React.Component {
     >
       <Bg state={this.props.state} actions={this.props.actions} />
       <div className="content">
-        <p className="close" onClick={() => { this.hoge(); }}>close</p>
+        <button
+          className="close"
+          onClick={() => { this.hoge(); }}
+          onKeyDown={this.handleKeyDown}
+        >
+          close
+        </button>
       </div>
             </div>);
   }

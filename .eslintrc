@@ -17,6 +17,6 @@
     "camelcase": 0,
     "import/no-extraneous-dependencies": 0,
     "class-methods-use-this": 0,
-    "prefer-stateless-function": 0,
+    "react/prefer-stateless-function": 0,
   }
 }
