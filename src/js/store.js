@@ -1,4 +1,5 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import Reducer from './reducer/reducer';
 
 const initialState = {
@@ -8,6 +9,6 @@ const initialState = {
   show_menu: null,
   bg: { animation_state: 0 },
 };
-const store = createStore(Reducer, initialState);
+const store = createStore(Reducer, initialState, applyMiddleware(thunk));
 
 export default store;

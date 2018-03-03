@@ -19,3 +19,15 @@ export function change_bg_animation_state(state) {
     state,
   };
 }
+
+export const hoge = () => {
+  const promise = new Promise((resolve) => {
+    setTimeout(() => resolve('nyan'), 2000);
+  });
+
+  return (dispatch) => {
+    promise.then(() => {
+      dispatch(show_menu());
+    });
+  };
+};

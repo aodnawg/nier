@@ -3,8 +3,8 @@ import Menu from './components/menu';
 
 export default class App extends React.Component {
   click_handler() {
-    this.props.actions.menu_actions.show_menu();
-    console.log(10);
+    this.props.actions.menu_actions.hoge();
+    console.log(10)
   }
 
   render() {

@@ -16,7 +16,6 @@ expect(hoge.height).to.eq(height);
 
 describe('', () => {
   it('', () => {
-    console.log(hoge.call());
     expect(hoge.piece_size).to.eq(10);
   });
 });
