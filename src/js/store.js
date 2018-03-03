@@ -16,6 +16,9 @@ const initialState = {
     show_contents: false,
     bg: { animation_state: 0 },
   },
+  contents: {
+    current_page: 'MAP',
+  },
 };
 
 const sagaMiddleware = createSagaMiddleware();

@@ -8,7 +8,8 @@ import * as piece_actions from './actions/piece_actions';
 function mapStateToProps(state) {
   return {
     value: state.value,
-    state: state.menu,
+    state: state.menu, // TODO
+    contents: state.contents,
   };
 }
 function mapDispatchToProps(dispatch) {

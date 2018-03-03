@@ -22,6 +22,7 @@ export default class Menu extends React.Component {
       <Contents
         state={this.props.state}
         actions={this.props.actions}
+        contents={this.props.contents}
       />
             </div>);
   }
