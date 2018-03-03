@@ -19,3 +19,12 @@ export function change_bg_animation_state(state) {
     state,
   };
 }
+
+export const HOGE = 'HOGE';
+export function hoge(state) {
+  console.log('hoge pushed');
+  return {
+    type: HOGE,
+    state,
+  };
+}

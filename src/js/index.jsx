@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import { Provider, connect } from 'react-redux';
 import store from './store';
 import Container from './container';
@@ -23,3 +25,5 @@ window.addEventListener(
   'resize',
   () => store.dispatch(set_window_size()), false,
 );
+
+console.log('nyan');
