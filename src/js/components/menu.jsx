@@ -1,5 +1,6 @@
 import React from 'react';
 import Bg from './menu/bg';
+import Contents from './menu/contents';
 
 export default class Menu extends React.Component {
   close_handler() {
@@ -18,17 +19,10 @@ export default class Menu extends React.Component {
         state={this.props.state}
         actions={this.props.actions}
       />
-      <div
-        className={`content ${contents_class}`}
-      >
-        <p
-          className="close"
-          onClick={ () => { this.close_handler(); }}
-          onKeyDown={this.handleKeyDown}
-        >
-          close
-        </p>
-      </div>
+      <Contents
+        state={this.props.state}
+        actions={this.props.actions}
+      />
             </div>);
   }
 }

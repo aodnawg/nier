@@ -18,6 +18,7 @@ export default class Bg extends React.Component {
           pieces={this.props.state.pieces}
           actions={this.props.actions}
           shown={this.props.state.show_bg}
+          showBgDuration={this.props.state.show_bg_duration}
         />
       </svg>
             </div>);

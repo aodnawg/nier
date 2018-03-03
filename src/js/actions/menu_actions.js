@@ -26,10 +26,24 @@ export function show_contents() {
   };
 }
 
+export const SHOW_NAV = 'SHOW_NAV';
+export function show_nav() {
+  return {
+    type: SHOW_NAV,
+  };
+}
+
 export const CLOSE_MENU = 'CLOSE_MENU';
 export function close_menu() {
   return {
     type: CLOSE_MENU,
+  };
+}
+
+export const HIDE_NAV = 'HIDE_NAV';
+export function hide_nav() {
+  return {
+    type: HIDE_NAV,
   };
 }
 

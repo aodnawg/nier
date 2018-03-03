@@ -5,7 +5,7 @@ async function wait() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve('finish');
-    }, 1000);
+    }, 500);
   });
 }
 
@@ -14,9 +14,11 @@ function* openMenuSaga() {
   yield put(actions.show_bg());
   yield call(wait);
   yield put(actions.show_contents());
+  yield put(actions.show_nav());
 }
 
 function* closeMenuSaga() {
+  yield put(actions.hide_nav());
   yield put(actions.hide_contents());
   yield put(actions.hide_bg());
   yield call(wait);

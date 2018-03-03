@@ -3,10 +3,9 @@ import Piece from './piece';
 
 export default class Pieces extends React.Component {
   make_delay_time() {
-    const max_ms = 1000; //TODO
-    const { pieces } = this.props;
+    const { pieces, showBgDuration } = this.props;
     return [...Array(pieces.length).keys()]
-      .map(v => Math.floor((v / pieces.length) * max_ms))
+      .map(v => Math.floor((v / pieces.length) * showBgDuration))
       .sort(() => Math.random() - 0.5);
   }
 

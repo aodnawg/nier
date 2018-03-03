@@ -11,6 +11,8 @@ const initialState = {
     pieces: [],
     show_menu: false,
     show_bg: false,
+    show_bg_duration: 500,
+    show_nav: false,
     show_contents: false,
     bg: { animation_state: 0 },
   },
