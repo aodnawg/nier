@@ -1,18 +1,23 @@
 import React from 'react';
-import Menu from './components/menu';
+import Menu from './containers/menu';
 
 export default class App extends React.Component {
   click_handler() {
     this.props.actions.menu_actions.show_menu();
-    console.log(10);
   }
 
   render() {
     return (<div>
       <div id="main">
-        <p className="trigger" onClick={() => { this.click_handler(); }}>open</p>
+        <p
+          className="trigger"
+          onClick={() => { this.click_handler(); }}
+          onKeyDown={this.handleKeyDown}
+        >
+          open
+        </p>
       </div>
-      <Menu state={this.props.state} actions={this.props.actions} />
+      <Menu />
             </div>);
   }
 }

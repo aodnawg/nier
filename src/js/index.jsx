@@ -7,7 +7,7 @@ import Container from './container';
 
 import '../scss/index.scss';
 
-import set_window_size from './action/set_window_size';
+import set_window_size from './actions/set_window_size';
 
 ReactDOM.render(
   <Provider store={store}>

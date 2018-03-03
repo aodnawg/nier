@@ -1,7 +1,7 @@
-import * as menu_actions from '../action/menu_actions';
-import * as set_window_size from '../action/set_window_size';
+import * as menu_actions from '../actions/menu_actions';
+import * as set_window_size from '../actions/set_window_size';
 
-export default function formReducer(state, action) {
+function menu(state = {}, action) {
   switch (action.type) {
     case set_window_size.SET_WINDOW_SIZE:
       return Object.assign({}, state, {
@@ -23,3 +23,5 @@ export default function formReducer(state, action) {
       return state;
   }
 }
+
+export default menu;
