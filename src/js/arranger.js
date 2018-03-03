@@ -45,9 +45,9 @@ export default class Arranger {
   piece_xys() {
     const grid = this.grid();
     const xys = grid.map((v, i) => ({
-      shown: false,
+      key: i,
       xy: this.piece_xy(v, i),
-      opacity: 0,
+      animation_state: 0, // 0 未, 1 途中, 2 完了
     }));
     return xys;
   }

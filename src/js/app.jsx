@@ -1,16 +1,16 @@
 import React from 'react';
-import Menu from './components/menu.jsx';
+import Menu from './components/menu';
 
 export default class App extends React.Component {
-  hoge(e) {
-    this.props.actions.show_menu();
-    console.log(this.props);
+  click_handler() {
+    this.props.actions.menu_actions.show_menu();
+    console.log(10);
   }
 
   render() {
     return (<div>
       <div id="main">
-        <p className="trigger" onClick={() => { this.hoge(); }}>open</p>
+        <p className="trigger" onClick={() => { this.click_handler(); }}>open</p>
       </div>
       <Menu state={this.props.state} actions={this.props.actions} />
             </div>);

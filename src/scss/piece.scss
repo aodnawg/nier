@@ -1,21 +1,19 @@
 @keyframes fadein {
   0%{
-    fill: #ffffff;
     fill-opacity: 0;
   }
   100%{
-    fill: #E5E5C4;
     fill-opacity: 1;
+    fill: #E5E5C4;
+
   }
 }
 
 @keyframes fadeout {
   0%{
-    fill: #E5E5C4;
     fill-opacity: 1;
   }
   100%{
-    fill: #ffffff;
     fill-opacity: 0;
   }
 }

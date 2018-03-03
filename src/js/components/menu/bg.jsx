@@ -1,6 +1,6 @@
 import React from 'react';
-import Filter from './bg/filter.jsx'
-import Pieces from './bg/pieces.jsx'
+import Filter from './bg/filter'
+import Pieces from './bg/pieces'
 
 export default class Bg extends React.Component {
   render() {
@@ -12,6 +12,7 @@ export default class Bg extends React.Component {
 
         <Filter />
         <Pieces pieces={this.props.state.pieces}
+          actions={this.props.actions}
           shown={this.props.state.show_menu} />
       </svg>
     </div>

@@ -6,6 +6,7 @@ const initialState = {
   window_height: 500,
   pieces: [],
   show_menu: null,
+  bg: { animation_state: 0 },
 };
 const store = createStore(Reducer, initialState);
 
