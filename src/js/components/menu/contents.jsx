@@ -18,6 +18,8 @@ export default class Contents extends React.Component {
         contents={this.props.contents}
       />
 
+      <div className="border_line" />
+
       <div className="main">
         <h1>{this.props.contents.current_page}</h1>
         <button
@@ -28,6 +30,8 @@ export default class Contents extends React.Component {
           close
         </button>
       </div>
+
+      <div className="border_line bottom" />
             </div>);
   }
 }

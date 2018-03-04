@@ -3,6 +3,10 @@
 @import "./menu";
 @import "./main";
 
+html {
+  font-family: "Helvetica Neue";
+}
+
 #main {
   background: url(../img/ss.jpg);
   background-size: cover;
