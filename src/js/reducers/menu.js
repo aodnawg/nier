@@ -8,10 +8,15 @@ function menu(state = {}, action) {
         window_width: action.value.width,
         window_height: action.value.height,
         pieces: action.value.pieces,
+        grid: action.value.grid,
+        arranger: action.value.arranger,
       });
 
     case menu_actions.SHOW_MENU:
       return Object.assign({}, state, { show_menu: true });
+
+    case menu_actions.SHOW_LINES:
+      return Object.assign({}, state, { show_lines: true });
 
     case menu_actions.SHOW_BG:
       return Object.assign({}, state, { show_bg: true });
@@ -30,6 +35,9 @@ function menu(state = {}, action) {
 
     case menu_actions.HIDE_BG:
       return Object.assign({}, state, { show_bg: false });
+
+    case menu_actions.HIDE_LINES:
+      return Object.assign({}, state, { show_lines: false });
 
     case menu_actions.HIDE_CONTENTS:
       return Object.assign({}, state, { show_contents: false });

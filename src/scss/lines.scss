@@ -1,0 +1,12 @@
+.lines{
+  line {
+    stroke-dasharray: 1000;
+    transition: stroke-dashoffset 0.5s linear;
+  }
+  &.hide{
+    line {stroke-dashoffset: 1000;}
+  }
+  &.show{
+    line{ stroke-dashoffset: 0; }
+  }
+}

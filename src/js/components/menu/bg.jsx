@@ -2,6 +2,7 @@ import React from 'react';
 
 import Filter from './bg/filter';
 import Pieces from './bg/pieces';
+import Lines from './bg/lines';
 
 export default class Bg extends React.Component {
   render() {
@@ -14,6 +15,12 @@ export default class Bg extends React.Component {
       >
 
         <Filter />
+        <Lines
+          grid={this.props.state.grid}
+          arranger={this.props.state.arranger}
+          showLines={this.props.state.show_lines}
+          showBgDuration={this.props.state.show_bg_duration}
+        />
         <Pieces
           pieces={this.props.state.pieces}
           actions={this.props.actions}

@@ -7,7 +7,11 @@ export default class Arranger {
   }
 
   call() {
-    return this.piece_xys();
+    return {
+      pieces: this.piece_xys(),
+      grid: this.grid(),
+      size: this.piece_size,
+    };
   }
 
   svg_params() {

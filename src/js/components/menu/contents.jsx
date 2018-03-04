@@ -17,15 +17,16 @@ export default class Contents extends React.Component {
         actions={this.props.actions}
         contents={this.props.contents}
       />
+
       <div className="main">
         <h1>{this.props.contents.current_page}</h1>
-        <p
+        <button
           className="close"
           onClick={() => { this.close_handler(); }}
           onKeyDown={this.handleKeyDown}
         >
           close
-        </p>
+        </button>
       </div>
             </div>);
   }

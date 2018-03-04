@@ -11,6 +11,8 @@ async function wait() {
 
 function* openMenuSaga() {
   yield put(actions.show_menu());
+  yield put(actions.show_lines());
+  yield call(wait);
   yield put(actions.show_bg());
   yield call(wait);
   yield put(actions.show_contents());
@@ -21,6 +23,8 @@ function* closeMenuSaga() {
   yield put(actions.hide_nav());
   yield put(actions.hide_contents());
   yield put(actions.hide_bg());
+  yield call(wait);
+  yield put(actions.hide_lines());
   yield call(wait);
   yield put(actions.hide_menu());
 }

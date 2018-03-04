@@ -12,6 +12,13 @@ export function show_menu() {
   };
 }
 
+export const SHOW_LINES = 'SHOW_LINES';
+export function show_lines() {
+  return {
+    type: SHOW_LINES,
+  };
+}
+
 export const SHOW_BG = 'SHOW_BG';
 export function show_bg() {
   return {
@@ -58,6 +65,13 @@ export const HIDE_BG = 'HIDE_BG';
 export function hide_bg() {
   return {
     type: HIDE_BG,
+  };
+}
+
+export const HIDE_LINES = 'HIDE_LINES';
+export function hide_lines() {
+  return {
+    type: HIDE_LINES,
   };
 }
 
