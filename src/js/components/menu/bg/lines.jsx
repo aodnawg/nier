@@ -6,6 +6,8 @@ export default class Lines extends React.Component { // TODO: ひどいコード
     if (!arranger) { return (<g />); }
 
     const { grid, size } = arranger;
+    if (!grid.length < 80) { return (<g />); }
+
     const grid_r = grid.slice().reverse();
     const cn = `lines ${this.props.showLines ? 'show' : 'hide'}`;
 
