@@ -4,6 +4,8 @@ import createSagaMiddleware from 'redux-saga';
 import Reducer from './reducers/index';
 import mySaga from './sagas/index';
 
+import pages from './../json/pages.json';
+
 const initialState = {
   menu: {
     window_width: 500, // TODO: 0にする
@@ -21,6 +23,7 @@ const initialState = {
   contents: {
     current_page: 'MAP',
   },
+  pages,
 };
 
 const sagaMiddleware = createSagaMiddleware();

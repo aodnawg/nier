@@ -9,7 +9,6 @@ export default class Menu extends React.Component {
 
   render() {
     const menu_class = this.props.state.show_menu ? 'show' : 'hide';
-    const contents_class = this.props.state.show_contents ? 'show' : 'hide';
 
     return (<div
       id="menu"
@@ -23,6 +22,7 @@ export default class Menu extends React.Component {
         state={this.props.state}
         actions={this.props.actions}
         contents={this.props.contents}
+        pages={this.props.pages}
       />
             </div>);
   }

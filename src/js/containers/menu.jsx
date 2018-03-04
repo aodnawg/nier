@@ -9,6 +9,7 @@ function mapStateToProps(state) {
   return {
     state: state.menu,
     contents: state.contents,
+    pages: state.pages,
   };
 }
 function mapDispatchToProps(dispatch) {

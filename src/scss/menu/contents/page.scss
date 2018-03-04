@@ -1,0 +1,35 @@
+#menu{
+  .contents {
+    .page{
+        width: 90vw;
+        margin: 0 5vw 5vh;
+
+      h1.page_title {
+        font-size: 4em;
+        letter-spacing: 0.15em;
+        margin: 5vh 0;
+      }
+
+      .page_box {
+        display: flex;
+        justify-content: space-between;
+
+        nav.sub_nav {
+          ul {
+            li {
+              display: block;
+              width: 30vw;
+              padding: 1em;
+              background: #ACA996;
+              margin-bottom: .5em;
+            }
+          }
+        }
+
+        .text {
+          width: 50vw;
+        }
+      }
+    }
+  }
+}

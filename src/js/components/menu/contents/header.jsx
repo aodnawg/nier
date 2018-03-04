@@ -4,7 +4,7 @@ import Button from './header/nav/button';
 export default class Header extends React.Component {
   render() {
     const nav_class = this.props.showNav ? 'show' : 'hide';
-    const buttons = ['MAP', 'QUEST', 'ITEM', 'WEAPON', 'SKILL', 'DATA', 'SYSTEM'];
+    const buttons = this.props.pages.map(p => p.name);
 
     return (<div className="header">
       <nav className={nav_class}>

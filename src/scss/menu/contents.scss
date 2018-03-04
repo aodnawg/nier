@@ -1,5 +1,5 @@
 @import "./contents/header";
-@import "./contents/main";
+@import "./contents/page";
 
 #menu{
   .contents {
@@ -18,7 +18,7 @@
   .border_line{
       width: 100vw;
       margin: 0 0 5vh;
-      height: 10px;
+      height: 2px;
       background: #3F3F37;
 
     &.bottom {

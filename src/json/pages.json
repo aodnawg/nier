@@ -1,0 +1,69 @@
+[
+  {
+    "name": "MAP",
+    "sub_contents": [
+      { "name": "MAP マップ", "text": "これ" },
+      { "name": "QUEST", "text": "watashi is neko😿" },
+      { "name": "ITEM", "text": "watashi is neko😿" },
+      { "name": "WEAPON", "text": "watashi is neko😿" },
+      { "name": "SKILL", "text": "watashi is neko😿" },
+      { "name": "DATA", "text": "watashi is neko😿" },
+      { "name": "SYSTEM", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "QUEST",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "ITEM",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "WEAPON",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "SKILL",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "DATA",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  },
+  {
+    "name": "SYSTEM",
+    "sub_contents": [
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" },
+      { "name": "nyan", "text": "watashi is neko😿" }
+    ],
+    "tips": "地図だよ"
+  }
+]
