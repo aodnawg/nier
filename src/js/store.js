@@ -4,7 +4,10 @@ import createSagaMiddleware from 'redux-saga';
 import Reducer from './reducers/index';
 import mySaga from './sagas/index';
 
-import pages from './../json/pages.json';
+import pages_raw from './../json/pages.json';
+
+const pages = pages_raw.map(p =>
+  Object.assign(p, {}, { current_sub_contents: 0 }));
 
 const initialState = {
   menu: {

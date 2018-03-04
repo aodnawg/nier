@@ -2,67 +2,67 @@
   {
     "name": "MAP",
     "sub_contents": [
-      { "name": "MAP マップ", "text": "これ" },
-      { "name": "QUEST", "text": "watashi is neko😿" },
-      { "name": "ITEM", "text": "watashi is neko😿" },
-      { "name": "WEAPON", "text": "watashi is neko😿" },
-      { "name": "SKILL", "text": "watashi is neko😿" },
-      { "name": "DATA", "text": "watashi is neko😿" },
-      { "name": "SYSTEM", "text": "watashi is neko😿" }
+      { "name": "MAP マップ", "text": "新宿は🏙豪雨☔️⚡️" },
+      { "name": "QUEST", "text": "あなた🤷‍何処へやら❓" },
+      { "name": "ITEM", "text": "今日が📅青く冷えてゆく🍃❄️東京🗼" },
+      { "name": "WEAPON", "text": "戦略は🚀皆無🙅‍" },
+      { "name": "SKILL", "text": "わたし👩‍🎤何処へやら🤷‍❓" },
+      { "name": "DATA", "text": "🧠脳🧠が水滴を💦" },
+      { "name": "SYSTEM", "text": "奪って💀乾く🔥" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "QUEST",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "ITEM",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "WEAPON",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "SKILL",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "DATA",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   },
   {
     "name": "SYSTEM",
     "sub_contents": [
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" },
-      { "name": "nyan", "text": "watashi is neko😿" }
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" },
+      { "name": "nyan", "text": "にゃーん😿" }
     ],
     "tips": "地図だよ"
   }

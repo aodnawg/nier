@@ -8,6 +8,7 @@
         font-size: 4em;
         letter-spacing: 0.15em;
         margin: 5vh 0;
+        text-shadow: 0.12em 0.12em 0 #ACA996;
       }
 
       .page_box {
@@ -16,18 +17,105 @@
 
         nav.sub_nav {
           ul {
-            li {
-              display: block;
+            li{
+              transition: all 0.5s ease;
+              position: relative;
               width: 30vw;
-              padding: 1em;
-              background: #ACA996;
-              margin-bottom: .5em;
+              margin-bottom: 1em;
+              cursor: pointer;
+
+
+              div {
+                transition: top,bottom,height 0.3s linear;
+              }
+
+              div.button {
+                padding: 10px 0;
+                min-width: 120px;
+                background: #ACA996;
+                text-align: left;
+                vertical-align: middle;
+
+                &:before{
+                  display: inline-block;
+                  width: 1em; height: 1em;
+                  margin-right: .5em; margin-left: .5em;
+                  background: #3F3F37;
+                  content: '';
+                }
+              }
+
+              &:hover {
+                div.button {
+                  background: #3F3F37;
+                  color: #E5E5C7;
+
+                  &:before{
+                    display: inline-block;
+                    width: 1em; height: 1em;
+                    margin-right: .5em; margin-left: .5em;
+                    background: #E5E5C7;
+                    content: '';
+                  }
+                }
+
+                div.line_top {
+                  height: 1px;
+                  width: 100%;
+                  background: #3F3F37;
+                  position: absolute;
+                  top: -3px;
+                }
+
+                div.line_bottom {
+                  height: 1px;
+                  width: 100%;
+                  background: #3F3F37;
+                  position: absolute;
+                  bottom: -3px;
+                }
+              }
+
+              &.selected {
+                div.button {
+                  background: #3F3F37;
+                  color: #E5E5C7;
+
+                  &:before{
+                    display: inline-block;
+                    width: 1em; height: 1em;
+                    margin-right: .5em; margin-left: .5em;
+                    background: #E5E5C7;
+                    content: '';
+                  }
+                }
+                div.line_top {
+                  height: 1px;
+                  width: 100%;
+                  background: #3F3F37;
+                  position: absolute;
+                  top: -3px;
+                }
+
+                div.line_bottom {
+                  height: 1px;
+                  width: 100%;
+                  background: #3F3F37;
+                  position: absolute;
+                  bottom: -3px;
+                }
+              }
             }
+
           }
         }
 
         .text {
           width: 50vw;
+          height: 40vh;
+          background: #D6D1BA;
+          box-sizing: border-box;
+          padding: 2em;
         }
       }
     }

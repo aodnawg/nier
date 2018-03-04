@@ -1,6 +1,7 @@
 import React from 'react';
+import SubNav from './page/sub_nav';
 
-export default class Page extends React.Component {
+export default class Page extends React.Component { // TODO propsが適当すぎる
   render() {
     const { page } = this.props;
 
@@ -9,11 +10,19 @@ export default class Page extends React.Component {
       <div className="page_box">
         <nav className="sub_nav">
           <ul>
-            {page.sub_contents.map(n => <li>{n.name}</li>)}
+            {page.sub_contents.map((n, i) =>
+              (<SubNav
+                key={i}
+                params={n}
+                changeSubContents={this.props.actions.page_actions.change_sub_contents}
+                subContentsIndex={i}
+                pageIndex={this.props.currentPageIndex}
+                pages={this.props.pages}
+              />))}
           </ul>
         </nav>
         <div className="text">
-          {page.sub_contents[0].text}
+          {page.sub_contents[this.props.currentSubContents].text}
         </div>
       </div>
 
