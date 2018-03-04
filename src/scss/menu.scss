@@ -1,3 +1,6 @@
+@import "./menu/contents";
+@import "./menu/bg";
+
 #menu{
   position: fixed;
   top: 0;
@@ -8,104 +11,6 @@
 
   &.show{ z-index: 0; }
   &.hide{ z-index: -1; }
-
-  .bg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
-  .contents {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90vw;
-    margin: 5vh 5vw;
-    z-index: 1;
-    transition: opacity 0.5s ease;
-
-    &.show{ opacity: 1; }
-    &.hide{ opacity: 0; }
-
-    .header{
-      nav{
-        ul{
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          position: relative;
-
-          li{
-            transition: all 0.5s ease;
-            position: relative;
-            width: 13%;
-
-            div {
-              transition: top,bottom,height 0.3s linear;
-            }
-
-            div.button {
-              padding: 10px 0;
-              min-width: 120px;
-              background: #ACA996;
-              text-align: center;
-            }
-
-            &:hover {
-              div.button {
-                background: #3F3F37;
-                color: #fff;
-              }
-
-              div.line_top {
-                height: 1px;
-                width: 100%;
-                background: #3F3F37;
-                position: absolute;
-                top: -3px;
-              }
-
-              div.line_bottom {
-                height: 1px;
-                width: 100%;
-                background: #3F3F37;
-                position: absolute;
-                bottom: -3px;
-              }
-            }
-
-            &.selected {
-              animation: palse 1s linear infinite alternate;
-
-              div.button {
-                background: #3F3F37;
-                color: #fff;
-              }
-
-              div.line_top {
-                height: 3px;
-                width: 100%;
-                background: #3F3F37;
-                position: absolute;
-                top: -3px;
-              }
-
-              div.line_bottom {
-                height: 10px;
-                width: 100%;
-                background: #3F3F37;
-                position: absolute;
-                bottom: -10px;
-              }
-            }
-          }
-        }
-        &.hide>ul>li{ opacity: 0 }
-        &.show>ul>li{ opacity: 1 }
-      }
-    }
-  }
 }
 
 @keyframes palse {
