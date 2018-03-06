@@ -4,17 +4,18 @@ import Button from './header/nav/button';
 export default class Header extends React.Component {
   render() {
     const nav_class = this.props.showNav ? 'show' : 'hide';
-    const buttons = this.props.pages.map(p => p.name);
+    const { pages } = this.props;
 
     return (<div className="header">
       <nav className={nav_class}>
         <ul>
-          {buttons.map((b, index) => (<Button
+          {pages.map((p, index) => (<Button
             key={index}
-            value={b}
+            value={p.name}
             delay={50 * index}
-            actions={this.props.actions}
-            currentPage={this.props.contents.current_page}
+            changeContents={this.props.actions.contents_actions.change_contents}
+            thisIndex={index}
+            currentPageIndex={this.props.currentPageIndex}
           />))}
         </ul>
       </nav>

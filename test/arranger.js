@@ -12,11 +12,9 @@ expect(hoge.row_qty).to.eq(9);
 expect(hoge.height).to.eq(height);
 // expect(hoge.grid()).to.eq(0)
 
-// console.log(hoge)
 
 describe('', () => {
   it('', () => {
-    console.log(hoge.call());
     expect(hoge.piece_size).to.eq(10);
   });
 });

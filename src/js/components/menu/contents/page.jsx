@@ -16,8 +16,8 @@ export default class Page extends React.Component { // TODO propsが適当すぎ
                 params={n}
                 changeSubContents={this.props.actions.page_actions.change_sub_contents}
                 subContentsIndex={i}
-                pageIndex={this.props.currentPageIndex}
-                pages={this.props.pages}
+                pageIndex={this.props.contents.current_page_index}
+                page={page}
               />))}
           </ul>
         </nav>

@@ -10,6 +10,14 @@ function page(state = {}, action) {
         return v;
       });
 
+    case page_actions.CHANGE_PAGE_TITLE:
+      return state.map((v, i) => {
+        if (i === action.page_index) {
+          return Object.assign(v, {}, { title: action.title });
+        }
+        return v;
+      });
+
     default:
       return state;
   }

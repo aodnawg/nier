@@ -24,7 +24,7 @@ const initialState = {
     arranger: null,
   },
   contents: {
-    current_page: 'MAP',
+    current_page_index: 0,
   },
   pages,
 };

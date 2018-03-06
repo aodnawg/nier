@@ -10,12 +10,9 @@ export default class Contents extends React.Component {
   render() {
     const contents_class = this.props.state.show_contents ? 'show' : 'hide';
     const { pages } = this.props;
-    const { current_page } = this.props.contents;
-
-    const page = pages.filter(p => p.name === current_page)[0];
+    const { current_page_index } = this.props.contents;
+    const page = pages[current_page_index];
     const { current_sub_contents } = page;
-
-    const current_page_index = pages.map(v => v.name).indexOf(page.name);
 
     return (<div
       className={`contents ${contents_class}`}
@@ -23,14 +20,13 @@ export default class Contents extends React.Component {
       <Header
         showNav={this.props.state.show_nav}
         actions={this.props.actions}
-        contents={this.props.contents}
         pages={this.props.pages}
+        currentPageIndex={current_page_index}
       />
 
       <div className="border_line" />
 
       <Page
-        currentPage={current_page}
         currentPageIndex={current_page_index}
         currentSubContents={current_sub_contents}
         page={page}

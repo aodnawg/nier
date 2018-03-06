@@ -2,13 +2,13 @@ import React from 'react';
 
 export default class Button extends React.Component {
   click_handler() {
-    this.props.actions.contents_actions.change_contents(this.props.value);
+    this.props.changeContents(this.props.thisIndex);
   }
 
   render() {
-    const { value, currentPage } = this.props;
+    const { thisIndex, currentPageIndex } = this.props;
     const transitionDelay = `${this.props.delay}ms`;
-    const selected = (value === currentPage) ? 'selected' : '';
+    const selected = (thisIndex === currentPageIndex) ? 'selected' : '';
 
     return (<li
       style={{ transitionDelay }}

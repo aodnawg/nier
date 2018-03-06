@@ -2,14 +2,14 @@ import React from 'react';
 
 export default class SubNav extends React.Component {
   click_handler() {
-    const { pageIndex, subContentsIndex } = this.props;
+    const { subContentsIndex, pageIndex } = this.props;
     this.props.changeSubContents(pageIndex, subContentsIndex);
   }
 
   render() {
-    const { subContentsIndex, pages, pageIndex } = this.props;
-    const currentSubContents = pages[pageIndex].current_sub_contents;
-    const selected = (subContentsIndex === currentSubContents) ? 'selected' : '';
+    const { subContentsIndex, page } = this.props;
+    const currentSubContentsIndex = page.current_sub_contents;
+    const selected = (subContentsIndex === currentSubContentsIndex) ? 'selected' : '';
 
     return (<li className={selected}>
               <div className="line_top" />
