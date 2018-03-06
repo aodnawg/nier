@@ -6,7 +6,7 @@ export default class Page extends React.Component { // TODO propsが適当すぎ
     const { page } = this.props;
 
     return (<div className="page">
-      <h1 className="page_title">{page.name}</h1>
+      <h1 className="page_title">{page.title}</h1>
       <div className="page_box">
         <nav className="sub_nav">
           <ul>

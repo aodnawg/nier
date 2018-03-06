@@ -24,7 +24,6 @@
               margin-bottom: 1em;
               cursor: pointer;
 
-
               div {
                 transition: top,bottom,height 0.3s linear;
               }
@@ -35,19 +34,36 @@
                 background: #ACA996;
                 text-align: left;
                 vertical-align: middle;
+                height: 1em;
+                position: relative;
+                z-index: 1;
+                transition: all .5s ease;
 
                 &:before{
                   display: inline-block;
-                  width: 1em; height: 1em;
+                  width: 1em; height: .9em;
                   margin-right: .5em; margin-left: .5em;
                   background: #3F3F37;
                   content: '';
                 }
+
+                &::after{
+                  display: block;
+                  width: 0vw; height: inherit;
+                  position: absolute;
+                  top: 0; left: 0;
+                  background: #3F3F37;
+                  z-index: -1;
+                  padding: inherit;
+                  height: inherit;
+                  content: '';
+                  transition: all .1s ease-in;
+                }
               }
 
               &:hover {
+
                 div.button {
-                  background: #3F3F37;
                   color: #E5E5C7;
 
                   &:before{
@@ -56,6 +72,10 @@
                     margin-right: .5em; margin-left: .5em;
                     background: #E5E5C7;
                     content: '';
+                  }
+
+                  &::after{
+                    width: 30vw;
                   }
                 }
 
@@ -87,6 +107,10 @@
                     margin-right: .5em; margin-left: .5em;
                     background: #E5E5C7;
                     content: '';
+                  }
+
+                  &::after{
+                    width: 30vw;
                   }
                 }
                 div.line_top {

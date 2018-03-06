@@ -24,3 +24,6 @@ window.addEventListener(
   'resize',
   () => store.dispatch(set_window_size()), false,
 );
+
+
+store.dispatch({ type: 'OPEN_MENU' });

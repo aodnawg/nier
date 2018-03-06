@@ -32,8 +32,8 @@ function* openMenuSaga() {
   yield put(menu_actions.show_bg());
   yield call(wait, 500);
   yield put(menu_actions.show_contents());
-  yield call(nier_type);
   yield put(menu_actions.show_nav());
+  yield call(nier_type);
 }
 
 function* closeMenuSaga() {
