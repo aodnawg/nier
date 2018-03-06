@@ -1,6 +1,7 @@
 import React from 'react';
 import Bg from './menu/bg';
 import Contents from './menu/contents';
+import Overlay from './menu/overlay';
 
 export default class Menu extends React.Component {
   close_handler() {
@@ -25,6 +26,7 @@ export default class Menu extends React.Component {
         pages={this.props.pages}
         showSubNav={this.props.state.show_sub_nav}
       />
+      <Overlay />
             </div>);
   }
 }
