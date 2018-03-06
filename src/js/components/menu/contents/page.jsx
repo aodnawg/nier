@@ -4,11 +4,14 @@ import SubNav from './page/sub_nav';
 export default class Page extends React.Component { // TODO propsが適当すぎる
   render() {
     const { page } = this.props;
+    const delay = 80;
+    const show_suv_nav_cn = this.props.showSubNav ? 'show' : 'hide';
+    const suv_nav_cn = `sub_nav ${show_suv_nav_cn}`;
 
     return (<div className="page">
       <h1 className="page_title">{page.title}</h1>
       <div className="page_box">
-        <nav className="sub_nav">
+        <nav className={suv_nav_cn}>
           <ul>
             {page.sub_contents.map((n, i) =>
               (<SubNav
@@ -18,6 +21,7 @@ export default class Page extends React.Component { // TODO propsが適当すぎ
                 subContentsIndex={i}
                 pageIndex={this.props.contents.current_page_index}
                 page={page}
+                delay={delay * (i - 1)}
               />))}
           </ul>
         </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Button extends React.Component {
   click_handler() {
-    this.props.changeContents(this.props.thisIndex);
+    this.props.actions.change_contents(this.props.thisIndex);
   }
 
   render() {

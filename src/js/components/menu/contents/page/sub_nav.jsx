@@ -10,8 +10,12 @@ export default class SubNav extends React.Component {
     const { subContentsIndex, page } = this.props;
     const currentSubContentsIndex = page.current_sub_contents;
     const selected = (subContentsIndex === currentSubContentsIndex) ? 'selected' : '';
+    const transitionDelay = `${ this.props.delay }ms`;
 
-    return (<li className={selected}>
+    return (<li
+              className={selected}
+              style={{ transitionDelay }}
+            >
               <div className="line_top" />
               <div
                 className="button"

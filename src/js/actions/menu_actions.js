@@ -89,3 +89,19 @@ export function change_bg_animation_state(state) {
     state,
   };
 }
+
+export const SHOW_SUB_NAV = 'SHOW_SUB_NAV';
+export function show_sub_nav() {
+  return {
+    type: SHOW_SUB_NAV,
+    show_sub_nav: true,
+  };
+}
+
+export const HIDE_SUB_NAV = 'HIDE_SUB_NAV';
+export function hide_sub_nav() {
+  return {
+    type: HIDE_SUB_NAV,
+    show_sub_nav: false,
+  };
+}

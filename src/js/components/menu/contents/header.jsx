@@ -13,7 +13,7 @@ export default class Header extends React.Component {
             key={index}
             value={p.name}
             delay={50 * index}
-            changeContents={this.props.actions.contents_actions.change_contents}
+            actions={this.props.actions.contents_actions}
             thisIndex={index}
             currentPageIndex={this.props.currentPageIndex}
           />))}

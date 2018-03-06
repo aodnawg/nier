@@ -30,6 +30,7 @@ export default class Contents extends React.Component {
         currentPageIndex={current_page_index}
         currentSubContents={current_sub_contents}
         page={page}
+        showSubNav={this.props.showSubNav}
       />
 
       <button
@@ -43,8 +44,4 @@ export default class Contents extends React.Component {
       <div className="border_line bottom" />
             </div>);
   }
-}
-
-Contents.propTypes = {
-
 }

@@ -5,7 +5,8 @@
         margin: 0 5vw 5vh;
 
       h1.page_title {
-        font-size: 4em;
+        height: 4rem;
+        font-size: 4rem;
         letter-spacing: 0.15em;
         margin: 5vh 0;
         text-shadow: 0.12em 0.12em 0 #ACA996;
@@ -18,11 +19,13 @@
         nav.sub_nav {
           ul {
             li{
-              transition: all 0.5s ease;
+              transition: all 0.8s ease;
               position: relative;
               width: 30vw;
               margin-bottom: 1em;
               cursor: pointer;
+              // transition: left, opacity 0.5s linear;
+
 
               div {
                 transition: top,bottom,height 0.3s linear;
@@ -130,8 +133,10 @@
                 }
               }
             }
-
           }
+
+          &.show {ul li { opacity: 1; left: 0;}}
+          &.hide {ul li { opacity: 0; left: -10vw; transition-duration: .4s !important; }}
         }
 
         .text {

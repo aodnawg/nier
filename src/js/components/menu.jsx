@@ -23,6 +23,7 @@ export default class Menu extends React.Component {
         actions={this.props.actions}
         contents={this.props.contents}
         pages={this.props.pages}
+        showSubNav={this.props.state.show_sub_nav}
       />
             </div>);
   }

@@ -7,9 +7,9 @@ export function change_contents(index) {
 }
 
 export const CHANGE_CURRENT_PAGE = 'CHANGE_CURRENT_PAGE';
-export function change_current_page(title) {
+export function change_current_page(index) {
   return {
     type: CHANGE_CURRENT_PAGE,
-    title,
+    index,
   };
 }

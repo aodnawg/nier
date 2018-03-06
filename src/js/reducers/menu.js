@@ -27,6 +27,12 @@ function menu(state = {}, action) {
     case menu_actions.SHOW_NAV:
       return Object.assign({}, state, { show_nav: true });
 
+    case menu_actions.SHOW_SUB_NAV:
+      return Object.assign({}, state, { show_sub_nav: true });
+
+    case menu_actions.HIDE_SUB_NAV:
+      return Object.assign({}, state, { show_sub_nav: false });
+
     case menu_actions.HIDE_NAV:
       return Object.assign({}, state, { show_nav: false });
 
