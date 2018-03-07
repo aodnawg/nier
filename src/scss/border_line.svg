@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <rect id="アートボード1" x="0" y="0" width="100" height="37" style="fill:none;"/>
+    <clipPath id="_clip1">
+        <rect id="アートボード11" serif:id="アートボード1" x="0" y="0" width="100" height="37"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <g transform="matrix(1.17647,0,0,1.17647,0,0)">
+            <path d="M49,23C51.208,23 53,24.792 53,27C53,29.208 51.208,31 49,31C46.792,31 45,29.208 45,27C45,24.792 46.792,23 49,23ZM40,9C42.208,9 44,10.792 44,13C44,15.208 42.208,17 40,17C37.792,17 36,15.208 36,13C36,10.792 37.792,9 40,9ZM58,9C60.208,9 62,10.792 62,13C62,15.208 60.208,17 58,17C55.792,17 54,15.208 54,13C54,10.792 55.792,9 58,9ZM85,4L13,4L13,8L0,8L0,0L85,0L85,4Z" style="fill:rgb(63,63,55);"/>
+        </g>
+    </g>
+</svg>
