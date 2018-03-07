@@ -1,14 +1,16 @@
+@import "./page/tips";
+
 #menu{
   .contents {
     .page{
         width: 90vw;
-        margin: 0 5vw 5vh;
+        margin: 0 3vw 5vh 7vw;
 
       h1.page_title {
         height: 4rem;
-        font-size: 4rem;
+        font-size: 3rem;
         letter-spacing: 0.15em;
-        margin: 5vh 0;
+        margin:  0 0 2vh;
         text-shadow: 0.12em 0.12em 0 #ACA996;
       }
 

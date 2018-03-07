@@ -1,5 +1,6 @@
 import React from 'react';
 import SubNav from './page/sub_nav';
+import Tips from './page/tips';
 
 export default class Page extends React.Component { // TODO propsが適当すぎる
   render() {
@@ -30,6 +31,7 @@ export default class Page extends React.Component { // TODO propsが適当すぎ
         </div>
       </div>
 
+      <Tips text={page.tips} />
             </div>
     );
   }
