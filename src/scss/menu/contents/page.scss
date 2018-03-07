@@ -19,15 +19,44 @@
         justify-content: space-between;
 
         nav.sub_nav {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
           ul {
+            position: relative;
+
+            &::before {
+              content: '';
+              width: 4px;
+              display: block;
+              position: absolute;
+              top: 0; left: -3vw;
+              margin-right: 10px;
+              height: 100%;
+              background: #D6D1BA;
+              transition: height .3s linear;
+            }
+
+            &::after {
+              content: '';
+              width: 12px;
+              display: block;
+              position: absolute;
+              top: 0; left: -4vw;
+              height: 100%;
+              background: #D6D1BA;
+              transition: height .3s linear;
+            }
+
             li{
-              transition: all 0.8s ease;
+              // transition: all 0.8s ease;
               position: relative;
               width: 30vw;
               margin-bottom: 1em;
               cursor: pointer;
-              // transition: left, opacity 0.5s linear;
-
+              z-index: 1;
 
               div {
                 transition: top,bottom,height 0.3s linear;
@@ -137,8 +166,25 @@
             }
           }
 
-          &.show {ul li { opacity: 1; left: 0;}}
-          &.hide {ul li { opacity: 0; left: -10vw; transition-duration: .4s !important; }}
+          &.show {ul li {
+            opacity: 1; left: 0;
+            transition: left .5s linear, opacity .5s linear;
+          }}
+          &.hide {ul li {
+            opacity: 0; left: -10vw;
+            // transition: opacity .5s linear;
+          }}
+
+          svg.selector {
+            width: 2rem;
+            height: auto;
+            fill: #3F3F37;
+            position: absolute;
+            top: 0;
+            left: -3.5vw;
+            transition: top .2s linear;
+            z-index: 1;
+          }
         }
 
         .text {

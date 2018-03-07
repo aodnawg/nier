@@ -1,5 +1,6 @@
 import React from 'react';
 import SubNav from './page/sub_nav';
+import Selector from '../../common/selector';
 import Tips from './page/tips';
 
 export default class Page extends React.Component { // TODO propsが適当すぎる
@@ -24,8 +25,10 @@ export default class Page extends React.Component { // TODO propsが適当すぎ
                 page={page}
                 delay={delay * (i - 1)}
               />))}
+            <Selector direction="y" index={this.props.currentSubContents} />
           </ul>
         </nav>
+
         <div className="text">
           {page.sub_contents[this.props.currentSubContents].text}
         </div>

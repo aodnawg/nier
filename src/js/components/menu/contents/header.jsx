@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './header/nav/button';
+import Selector from '../../common/selector';
 
 export default class Header extends React.Component {
   render() {
@@ -17,6 +18,7 @@ export default class Header extends React.Component {
             thisIndex={index}
             currentPageIndex={this.props.currentPageIndex}
           />))}
+          <Selector direction="x" index={this.props.currentPageIndex} />
         </ul>
       </nav>
             </div>
